@@ -1,0 +1,96 @@
+3rd HTML web page code
+----------------------------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Page</title>
+</head>
+<body>
+    <nav><a href="#">Home</a> | <a href="#">About</a></nav>
+    <header><h1>Welcome</h1></header>
+<!-- Form with 5 Inputs -->
+    <form>
+        <input type="text" placeholder="Name">
+        <input type="email" placeholder="Email">
+        <input type="password" placeholder="Password">
+        <input type="date">
+        <input type="submit">
+    </form>
+<!-- SVG -->
+    <svg width="50" height="50"><circle cx="25" cy="25" r="20" fill="yellow"/></svg>
+<!-- Canvas -->
+    <canvas id="canvas" width="50" height="50"></canvas>
+<footer>&copy; 2024</footer>
+<script>
+        const ctx = document.getElementById('canvas').getContext('2d');
+        ctx.fillStyle = 'blue';
+        ctx.fillRect(10, 10, 30, 30);  // Draw square
+    </script>
+</body>
+</html>
+----------------------------------------------------------------------------------------------------------
+ 4th React front-end example that uses hooks (useState, useEffect, and useRef) for a form with validation code
+----------------------------------------------------------------------------------------------------------
+import React, { useState, useEffect, useRef } from 'react';
+const App = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [nameError, setNameError] = useState('');
+  const [emailError, setEmailError] = useState('');
+  const emailInputRef = useRef(null);
+ useEffect(() => {
+   emailInputRef.current.focus();
+  }, []);
+const validateForm = (event) => {
+    event.preventDefault();
+    setNameError('');
+    setEmailError('');
+let valid = true;
+if (name.trim() === '') {
+      setNameError('Name is required.');
+      valid = false;
+    }
+const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+    if (email.trim() === '') {
+      setEmailError('Email is required.');
+      valid = false;
+    } else if (!emailPattern.test(email)) {
+      setEmailError('Please enter a valid email address.');
+      valid = false;
+    }
+    if (valid) {
+      alert('Form submitted successfully!');
+      // Reset form fields
+      setName('');
+      setEmail('');
+    }
+  };
+return (
+    <div>
+      <h2>Simple Form Validation with React Hooks</h2>
+      <form onSubmit={validateForm}>
+        <label htmlFor="name">Name:</label>
+        <input
+          type="text"
+          id="name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}  />
+        {nameError && <span className="error" style={{ color: 'red' }}>{nameError}</span>}
+        <br /><br />
+ <label htmlFor="email">Email:</label>
+        <input
+          type="text"
+          id="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          ref={emailInputRef} />
+        {emailError && <span className="error" style={{ color: 'red' }}>{emailError}</span>}
+        <br /><br />
+<input type="submit" value="Submit" />
+      </form>
+    </div>
+  );
+};
+export default App;
