@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Reverser</title>
+    <script>
+        function reverseString() {
+            // Show confirmation box
+            let confirmAction = confirm("Do you want to reverse a string?");
+            
+            // If the user clicks 'OK'
+            if (confirmAction) {
+                // Prompt the user to input a string
+                let inputString = prompt("Please enter a string to reverse:");
+                
+                // If the user provided a string
+                if (inputString !== null) {
+                    // Reverse the string
+                    let reversedString = inputString.split('').reverse().join('');
+                    
+                    // Show an alert with the reversed string
+                    alert("Reversed String: " + reversedString);
+                }
+            } else {
+                // If the user clicks 'Cancel' in confirmation
+                alert("Action cancelled.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>String Reverser</h1>
+    <p>Click the button below to reverse a string.</p>
+    <button onclick="reverseString()">Reverse String</button>
+</body>
+</html>
