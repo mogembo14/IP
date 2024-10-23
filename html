@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WeatherWise - Your go-to weather updates">
+    <title>WeatherWise - Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            float: left;
+        }
+        nav ul li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        nav ul li a:hover {
+            background-color: #111;
+        }
+        section {
+            padding: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+              table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        img {
+            width: 150px;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>WeatherWise</h1>
+        <p>Your Go-To Weather Updates</p>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Forecast</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content Section -->
+    <section>
+        <h2>Welcome to WeatherWise!</h2>
+        <p><strong>WeatherWise</strong> brings you the most accurate and up-to-date weather forecasts for your area.</p>
+
+        <!-- Lists Section -->
+        <h3>Why Choose WeatherWise?</h3>
+        <ul>
+            <li>Accurate forecasts</li>
+            <li>Real-time weather alerts</li>
+            <li>Global coverage</li>
+        </ul>
+
+        <h3>Our Features:</h3>
+        <ol>
+            <li>Detailed hourly forecasts</li>
+            <li>Interactive weather maps</li>
+            <li>Severe weather alerts</li>
+        </ol>
+
+<svg width="500" height="400">
+<polygon points="100,10,40,198,190,78,10,78,160,198">
+</svg>
+
+ <canvas id="myCanvas" width="400" height="300">
+        Your browser does not support the canvas element.
+    </canvas>
+
+    <script>
+        // Get the canvas element by its ID
+        const canvas = document.getElementById('myCanvas');
+        // Get the 2D drawing context for the canvas
+        const ctx = canvas.getContext('2d');
+        
+        // Set the fill color
+        ctx.fillStyle = 'lightblue';
+        // Draw a rectangle (x, y, width, height)
+        ctx.fillRect(50, 50, 200, 100);
+
+        // Set a stroke color
+        ctx.strokeStyle = 'blue';
+        // Draw an outlined rectangle (x, y, width, height)
+        ctx.strokeRect(100, 100, 200, 100);
+    </script>
+
+
+        <!-- Image Section -->
+        <h3>Current Weather Image:</h3>
+        <img src="weather_image.jpg" alt="Current Weather">
+
+        <!-- Multimedia Section -->
+        <h3>Check Out Our Latest Weather Report:</h3>
+        <video controls width="320" height="240">
+            <source src="weather_report.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <h3>Listen to our WeatherWise Podcast:</h3>
+        <audio controls>
+            <source src="weather_podcast.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+ <!-- Table Section -->
+        <h3>Weekly Weather Overview:</h3>
+        <table>
+            <tr>
+                <th>Day</th>
+                <th>Condition</th>
+                <th>Temperature</th>
+                <th>Wind Speed</th>
+            </tr>
+            <tr>
+                <td>Monday</td>
+                <td>Sunny</td>
+                <td>25°C</td>
+                <td>10 km/h</td>
+            </tr>
+            <tr>
+                <td>Tuesday</td>
+                <td>Cloudy</td>
+                <td>22°C</td>
+                <td>12 km/h</td>
+            </tr>
+            <tr>
+                <td>Wednesday</td>
+                <td>Rainy</td>
+                <td>18°C</td>
+                <td>15 km/h</td>
+            </tr>
+        </table>
+
+           </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 WeatherWise. All Rights Reserved.</p>
+    </footer>
+
+</body>
+
+</html>
