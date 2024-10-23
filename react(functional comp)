@@ -1,0 +1,14 @@
+import React, { useState } from 'react';
+const FunctionalComponent = ({ initialCount }) => {
+    const [count, setCount] = useState(initialCount);
+return (
+        <div>
+            <h1>Count: {count}</h1>
+            <button onClick={() => setCount(count + 1)}>Increment</button>
+        </div>
+    );
+};
+const App = () => {
+    return <FunctionalComponent initialCount={0} />;
+};
+export default App;
